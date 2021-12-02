@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kenya Catholic Musicians Application</title>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="./styles/addScripts.css">
+    <link rel="stylesheet" href="libs/fontawesome-4.5.0.min.css">
+
+    <!-- declaring firebase sdk -->
+      <!-- declaring firebase sdk -->
+        <!-- declaring firebase sdk -->
+          <!-- declaring firebase sdk -->
+            <!-- declaring firebase sdk -->
+              <!-- declaring firebase sdk -->
+                <!-- declaring firebase sdk -->
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <!-- <script src="https://www.gstatic.com/Firebasejs/7.22.0/Firebase-firestore.js"></script> -->
+<link rel="stylesheet" type="text/css" href="./libs/jquery.dataTables.min.css">
+
+
+<script src="./libs/jquery-3.5.1.js"></script>
+<script src="./libs/jquery.dataTables.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.9.426/pdf.js"></script>
+<script src="libs/pdfpreview/pdf.worker.js"></script>
+
+<script src="scripts/modals.js"></script> 
+ 
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>           
+<script defer src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>  
+<script src="scripts/app.js"></script>
+<script>getForums();</script>
+<link rel="icon" type="image/png" href="./img/k.jpg"> 
+  </head>
+  <body>
+    <div  class="box">
+      <div class="nav">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true" style="margin-right: 10px;"></i>HOME</a></li>
+            <li><a href="users.html"><i class="fa fa-user" aria-hidden="true" style="margin-right: 10px;"></i>USERS</a></li>
+            <li><a href="scripts.html"><i class="fa fa-book" aria-hidden="true"></i>SCRIPTS</a></li>
+            <li><a href="learners.html"><i class="fa fa-book" aria-hidden="true"></i>LEARNERS</a></li>
+            <li><a href="forums.html"><i class="fa fa-book" aria-hidden="true"></i>FORUMS</a></li>
+          </ul>
+    </div>
+      
+<div class="home_content_view">
+  <div style="background-color: #070222;text-align: center;padding:20px;" class="header" >
+    <h3 style="color:#fff;text-align:center;">Kenya Catholic Musicians Application</h3>
+  </div>
+  <div class="holder">
+<div class="table">
+  <table id="forumtable" class="display" width="100%" style="margin-left: 70px;margin-top: 50px;"></table>
+  </div>
+  <div id="add-category" style="position: fixed;display:none;width:100%;height:100%;background-color:rgba(10, 10, 10, 0.74);top: 0;margin: 0 auto;">
+    <div class="dialog2_content" style="align-content:center;">
+      <div>
+        <div class="closemodal" style="padding: 5px;" onclick="closeM1();"><i class="fa fa-times" aria-hidden="true" style="font-size: 30px;"></i></div>
+      <div style="margin-left: 10px;width: 100%;text-align:center"id="title"></div>
+    </div>
+      <input type="text" name="" id="text" placeholder="Enter Message" style="height: 100px;"><br>
+    <button onclick="addNotification();">SUBMIT</button>
+    </div>
+    <script type="text/javascript">
+    function addNotification(){
+      var db=firebase.firestore();
+      var text=document.getElementById('text').value;
+      var id=document.getElementById('tt').innerText;
+      
+                var sender="admin"
+      //            var viewType=3
+      //            var time=""
+      //            var date_m_year=""
+      //           var diocese="GENERAL"
+      //          var loves=0
+      //           var forum_name=id
+      //            var responses=0
+      //            var url=""
+      //           var senderProf=""
+//               @ServerTimestamp val sentAt: Timestamp? = null
+      //db.collection("files").doc(dio)
+      //.set({name: dio});
+
+      db.collection("rooms").doc(id).collection("messages")
+      .doc()
+      .set({text: text,
+      sender: "admin",
+      time: "yesterday",
+      diocese: "GENERAL",
+      loves: 0,
+      forum_name: id,
+      responses:0,
+      url:"null",
+      senderProf:"https://firebasestorage.googleapis.com/v0/b/musical-6eed8.appspot.com/o/profile%2F30617?alt=media&token=66682955-db55-42a1-970d-0e0fd26c773c"},
+      );
+
+    }
+    </script>
+  </div>
+</div>
+
+</div>
+ 
+</div>
+  </body>
+</html>

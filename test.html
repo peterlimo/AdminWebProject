@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limooooooooooooo</title>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>           
+<script defer src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>  
+
+<script src="./libs/jquery-3.5.1.js"></script>
+<script src="./libs/jquery.dataTables.min.js"></script>
+<script src="scripts/app.js"></script>
+
+</head>
+<body>
+    <form>
+        <input type="text" id="no"/>
+        <input type="text" id="number" value="0"/>
+        <input type="button" onclick="incrementValue()" value="next Question" />
+        <button id="done" style="display:none;">DONE</button>
+     </form>
+<div id="holder">
+
+</div>
+     <script>
+         function incrementValue()
+{
+    displayQuinput();
+    var no = parseInt(document.getElementById('no').value, 10);
+    var value = parseInt(document.getElementById('number').value, 10);
+
+    value = isNaN(value) ? 0 : value;
+
+    value++;
+    document.getElementById('number').value = value;
+   if (value==no) {
+    document.getElementById('done').style.display="block";
+    }
+}
+function   displayQuinput(){
+    var html="<input>"
+}
+     </script>
+</body>
+</html>

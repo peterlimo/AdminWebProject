@@ -1,0 +1,21 @@
+/* *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aquamarine;
+}
+.container{
+
+  display: flex;
+  margin:auto;
+  margin-top: 100px;
+}
+.container .c1{
+    
+}
+input[type="file"]{
+background-color:skyblue;
+width:100px;
+height: 30px;
+} */

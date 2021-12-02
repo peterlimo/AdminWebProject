@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="./img/k.jpg"> 
+    <style>
+      html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: open sans-serif;
+}
+.box {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.box .header {
+  flex: 0 1 auto;
+}
+.box .content {
+  flex: 1 1 auto;
+}
+.box .footer {
+  flex: 0 1 40px;
+  background-color: #000;
+}
+.nav{
+  background-color:#000d1a;
+  height: 520px;
+  left: 0;
+ width:15%;
+}
+.nav ul{
+    margin-top:20px;
+    text-align: center;
+}
+.nav li{
+list-style: none;
+width: 100%;
+}
+.nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  color: #fff;
+}
+.nav a:hover, .offcanvas a:focus{
+  color: #f1f1f1;
+}
+.home_content_view{
+  padding: 20px;
+  -webkit-column-count: 3; 
+  -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+   
+    column-gap: 40px;
+}
+.user_content_view{
+  -webkit-column-count: 6; 
+  -moz-column-count: 6; /* Firefox */
+    column-count: 6;
+}
+
+.content_no_of_users{
+  width:320px;
+  height: 180px;
+  background-color: beige;
+  border-radius: 7px;
+}
+.user{
+  text-align: center;
+  margin: 15px;
+  background-color:azure;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+}
+    </style>
+</head>
+<head>
+  <div style="background-color: #000d1a;text-align: center;" class="header" >
+    <h2 style="color:#fff;text-align:center;">Kenya Catholic Musicians Application</h2>
+  </div>
+  <div class="nav">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="users.html">USERS</a></li>
+        <li><a href="scripts.html">SCRIPTS</a></li>
+        <li><a href="#">UPDATE</a></li>
+    </ul>
+</div>
+  </head>
+  <body class="container">
+  
+  
+  <main>
+    <div class="jumbotron">
+ <h1>this is the about page</h1>
+    </div>
+  </main>
+  
+  
+  
+  </body>
+  </html>

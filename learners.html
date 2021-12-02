@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kenya Catholic Musicians Application</title>
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="./styles/addScripts.css">
+    <link rel="stylesheet" href="libs/fontawesome-4.5.0.min.css">
+
+    <!-- declaring firebase sdk -->
+      <!-- declaring firebase sdk -->
+        <!-- declaring firebase sdk -->
+          <!-- declaring firebase sdk -->
+            <!-- declaring firebase sdk -->
+              <!-- declaring firebase sdk -->
+                <!-- declaring firebase sdk -->
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <!-- <script src="https://www.gstatic.com/Firebasejs/7.22.0/Firebase-firestore.js"></script> -->
+<link rel="stylesheet" type="text/css" href="./libs/jquery.dataTables.min.css">
+<link rel="icon" type="image/png" href="./img/k.jpg"> 
+
+<script src="./libs/jquery-3.5.1.js"></script>
+<script src="./libs/jquery.dataTables.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.9.426/pdf.js"></script>
+<script src="libs/pdfpreview/pdf.worker.js"></script>
+
+<script src="scripts/modals.js"></script> 
+ 
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-app.js"></script>           
+<script defer src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-storage.js"></script>  
+<script src="scripts/app.js"></script>
+<script src="scripts/modals.js"></script>
+  </head>
+  <body>
+    <div  class="box">
+
+    
+      <!-- navigation content -->
+      <!-- navigation content -->
+      <!-- navigation content -->
+      <!-- navigation content -->
+              <!-- navigation content -->
+                <!-- navigation content -->
+      <div class="nav">
+        <ul>
+            <li><a href="index.html"><i class="fa fa-home" aria-hidden="true" style="margin-right: 10px;"></i>HOME</a></li>
+            <li><a href="users.html"><i class="fa fa-user" aria-hidden="true" style="margin-right: 10px;"></i>USERS</a></li>
+            <li><a href="scripts.html"><i class="fa fa-book" aria-hidden="true"></i>SCRIPTS</a></li>
+            <li><a href="learners.html"><i class="fa fa-book" aria-hidden="true"></i>LEARNERS</a></li>
+            <li><a href="forums.html"><i class="fa fa-book" aria-hidden="true"></i>FORUMS</a></li>
+        </ul>
+    </div>
+      
+<div class="home_content_view">
+  <div style="background-color: #070222;text-align: center;padding:20px;" class="header" >
+    <h3 style="color:#fff;text-align:center;">Kenya Catholic Musicians Application</h3>
+  </div>
+  <!-- open modal buttons-->
+   <!-- open modal buttons-->
+    <!-- open modal buttons-->
+     <!-- open modal buttons-->
+      <!-- open modal buttons-->
+       <!-- open modal buttons-->
+        <!-- open modal buttons-->
+        <div class="holder">
+  <div class="open-modal-buttons" style="margin-left: 20px;">
+    <div class="open-model_btn" onclick="openAddGrades();"><p>ADD PDF TUTORIALS</p></div>
+    <div class="open-model_btn" onclick="openAddVideos();"><p>ADD VIDEO TUTORIALS</p></div>
+    <div class="open-model_btn" onclick="openAddTests();"><p>ADD TESTS</p></div>
+    <div class="open-model_btn" onclick="openAddQuestions();"><p>ADD QUESTIONS</p></div>
+<div> 
+</div>
+</div>
+  
+    <div class="detail-container" style="margin-left: 20px;">
+     
+     
+    </div>  
+
+  </div>
+
+
+
+<!-- ////////////////////////////////////// -->
+
+
+          <!-- add question modal -->
+ <!-- add question modal -->
+  <!-- add question modal -->
+   <!-- add question modal -->
+    <!-- add question modal -->
+     <!-- add question modal -->
+      <!-- add question modal -->
+       <!-- add question modal -->
+        <!-- add question modal -->
+         <!-- add question modal -->
+
+          <div id="add-questions" style="position: fixed;display:none;width:100%;height:100%;background-color:rgba(10, 10, 10, 0.973);top: 0;margin: auto;">
+            <div class="dialog3_content" style="align-content:center;" id="q">
+              <div>
+                <div class="closemodal" style="padding: 5px;" onclick="closeExam();"><i class="fa fa-times" aria-hidden="true" style="font-size: 30px;"></i></div>
+          
+                <select id="selectgrade" required>
+               <option disabled selected >-- Select grade--</option>
+              </select><br>
+              <input type="text" placeholder="add questions" id="question" style="font-size: 30px;width: 100%;height:auto;"/><br>
+              <input type="text" placeholder="option A" id="a1" style="font-size: 30px;width: 100%;height:auto;"/><br>
+              <input type="text" placeholder="option B" id="a2" style="font-size: 30px;width: 100%;height:auto;"/><br>
+                <button onclick="addQuestions();" id="fuck">SUBMIT</button>
+            </div>
+            <script>
+              function addQuestions() {
+                var grade=document.getElementById("selectgrade").value;
+                var question=document.getElementById("question").value;
+                var a1=document.getElementById("a1").value;
+                var a2=document.getElementById("a2").value;
+                db.collection("exams").doc(grade).collection("questions").doc(question)
+                .set({
+                  question: question,
+                  a1:a1,
+                  a2:a2,
+                })
+              }
+
+
+              function appendGrade(name)
+              {
+                 return "<option>"+
+                  name+
+                 "</option>"
+              }
+              function getGrades()
+              {
+                 db.collection("exams").get().then((querySnapshot) => {
+                      querySnapshot.forEach((doc) => {
+                     var user=appendGrade(doc.id);
+                    document.getElementById("selectgrade").innerHTML= document.getElementById("selectgrade").innerHTML+user;
+                     
+                      });
+                  });
+              }
+            </script>
+          </div>
+          </div>
+          <!-- Videos -->
+            <!-- Videos -->
+              <!-- Videos -->
+                <!-- Videos -->
+                  <!-- Videos -->
+                  <div id="add-videos" style="position: fixed;display:none;background-color:rgba(10, 10, 10, 0.74);top: 0;height: 100%;width: 100%;margin: auto;">
+                    <div class="dialog3_content" style="align-content:center;" id="q">
+                      <div>
+                        <div class="closemodal" style="padding: 5px;" onclick="closeVideos();"><i class="fa fa-times" aria-hidden="true" style="font-size: 30px;"></i></div>
+                  <button>PASTE FROM CLIP BOARD</button>
+                      <input class="editable" type="text" placeholder="paste video link here!" id="link" /><br>
+                      <button onclick="addLink();">SUBMIT</button>
+                    </div>
+                    <script>
+                      function addLink() {
+                        var link=document.getElementById("link").value;
+                        db.collection("learn").doc("videos").collection("youtubeLinks").doc()
+                        .set({
+                         link:link
+                        })
+                      }
+                    </script>
+                  </div>
+                  </div>
+          <!-- ///pdfs -->
+          <!-- ///pdfs -->
+          <!-- ///pdfs -->
+          <!-- ///pdfs -->
+          <!-- ///pdfs -->
+
+          <div id="add-pdfs" style="position: fixed;display:block;width:100%;height:100%;background-color:rgba(10, 10, 10, 0.74);top: 0;margin: auto;">
+            <div class="dialog3_content"  id="q">
+              <div>
+                <div class="closemodal" style="padding: 5px;" onclick="closepdfs();"><i class="fa fa-times" aria-hidden="true" style="font-size: 30px;"></i></div>
+          
+                <select id="selecttype" required>
+                  <option selected>advanced</option>
+                  <option>beginner</option>
+              </select><br>
+              <input type="file" accept="application/pdf" id="file" value="Choose Pdf">
+              <input type="title" class="editable" placeholder="pdf title" id="title" style="font-size: 30px;width: 100%;height:auto;"/><br>
+              <progress id="uploader" value="0" max="100">0%</progress>
+            <button onclick="upLoad();" id="fuck">SUBMIT</button>
+            </div>
+            </div>
+            </div>
+<!-- tests tests tests tests tests tests tests -->
+<!-- tests tests tests tests tests tests tests -->
+<!-- tests tests tests tests tests tests tests -->
+<!-- tests tests tests tests tests tests tests -->
+<!-- tests tests tests tests tests tests tests -->
+<!-- tests tests tests tests tests tests tests -->
+<!-- tests tests tests tests tests tests tests -->
+<!-- tests tests tests tests tests tests tests -->
+<div id="add-test" style="position: fixed;display:none;width:100%;height:100%;background-color:rgba(10, 10, 10, 0.74);top: 0;margin: auto;">
+<div class="dialog3_content" style="align-content:center;" id="q">
+<div>
+ <div class="closemodal" style="padding: 5px; align-content:center;" onclick="closeTests();"><i class="fa fa-times" aria-hidden="true" style="font-size: 30px;"></i></div>
+<h4>Add test title</h4>
+    <input type="text" class="editable" placeholder="test title" id="test" style="font-size: 30px;width: 300px;height:auto;"/><br>
+   <button onclick="addTests();" id="fuck">SUBMIT</button>
+  </div>
+  </div>
+  </div>
+          <script>getGrades();</script>
+
+          <script >
+        
+              function addTests(){
+                var link=document.getElementById("link").value;
+                        db.collection("learn").doc("videos").collection("youtubeLinks").doc()
+                        .set({
+                         link:link
+                        })
+              }
+             
+              function upLoad()
+              {
+                var uploader=document.getElementById("uploader");
+                var file=document.getElementById("file").files[0];
+                var title=document.getElementById("title").value;
+                if(file==null)
+                {
+                  alert("Please choose file to upload!")
+                }
+              var storageRef = firebase.storage().ref('tutorials/'+file.name);
+              task = storageRef.put(file);
+              task.on('state_changed', function progress(snapshot) {
+    var percentage = (snapshot.bytesTransferred/snapshot.totalBytes)*100;
+    uploader.value = percentage;
+
+  }, function(err) {
+alert(err.message)
+  },function(){
+    task.snapshot.ref.getDownloadURL().then(
+                function(downloadURL) {
+                  addDocData(downloadURL)
+               // You get your url from her
+  
+           });
+
+  });
+                     
+             
+              }
+              function addDocData(url)
+              {
+                  var select = document.getElementById('selecttype').value;
+                  var title=document.getElementById('title').value;
+              db.collection("learn").doc("pdfmaterials").collection(select).doc(title).set({
+                  url:url
+              });
+              }
+          </script>
+        </div>  
+  </div>
+
+    </div>
+   
+  </body>
+</html>
